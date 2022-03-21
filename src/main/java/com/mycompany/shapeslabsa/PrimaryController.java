@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 
 public class PrimaryController {
@@ -35,5 +36,13 @@ public class PrimaryController {
         moveAll.setX(200);
         theRectangle.getTransforms().add(moveAll);
         theCircle.getTransforms().add(moveAll);
+    }
+    
+    @FXML
+    private void rotateRect(){
+        Rotate rotateRect = new Rotate();
+        rotateRect.setAngle(60);
+        theRectangle.getTransforms().add(rotateRect);
+        
     }
 }

@@ -17,6 +17,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#moveRect" prefHeight="33.0" prefWidth="108.0" text="Rect Right 100" />
             <Button mnemonicParsing="false" onAction="#moveAll" prefHeight="32.0" prefWidth="110.0" text="All Right 200" />
+            <Button mnemonicParsing="false" onAction="#rotateRect" prefHeight="33.0" prefWidth="102.0" text="Rect Rotate 60" />
          </children>
       </HBox>
       <Pane prefHeight="400.0" prefWidth="600.0">
