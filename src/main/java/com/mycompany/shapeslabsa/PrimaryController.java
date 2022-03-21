@@ -60,8 +60,8 @@ public class PrimaryController {
         Scale scaleCircle = new Scale();
         scaleCircle.setX(2);
         scaleCircle.setY(2);
-        scaleCircle.setPivotX(theCircle.getRadius());
-        scaleCircle.setPivotY(theCircle.getRadius());
+        scaleCircle.setPivotX(theCircle.getCenterX() - theCircle.getRadius());
+        scaleCircle.setPivotY(theCircle.getCenterY() - theCircle.getRadius());
 
         theCircle.getTransforms().add(scaleCircle);
     }
