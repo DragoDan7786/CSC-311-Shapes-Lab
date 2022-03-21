@@ -2,9 +2,12 @@ package com.mycompany.shapeslabsa;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
+import javafx.scene.transform.Scale;
 import javafx.scene.transform.Translate;
 
 public class PrimaryController {
@@ -19,6 +22,9 @@ public class PrimaryController {
 
     @FXML
     private Circle theCircle;
+    
+    @FXML
+    private Pane paneMain;
 
     @FXML
     private void moveRect() {
@@ -31,20 +37,32 @@ public class PrimaryController {
 
     @FXML
     private void moveAll() {
-        
+
         Translate moveAll = new Translate();
         moveAll.setX(200);
-        theRectangle.getTransforms().add(moveAll);
-        theCircle.getTransforms().add(moveAll);
+        for (Node n : paneMain.getChildren()) {
+            n.getTransforms().add(moveAll);
+        }
     }
-    
+
     @FXML
-    private void rotateRect(){
+    private void rotateRect() {
         Rotate rotateRect = new Rotate();
         rotateRect.setAngle(60);
-        rotateRect.setPivotX(theRectangle.getWidth()/2);
-        rotateRect.setPivotY(theRectangle.getHeight()/2);
+        rotateRect.setPivotX(theRectangle.getWidth() / 2);
+        rotateRect.setPivotY(theRectangle.getHeight() / 2);
         theRectangle.getTransforms().add(rotateRect);
-        
+
+    }
+
+    @FXML
+    private void scaleCircle() {
+        Scale scaleCircle = new Scale();
+        scaleCircle.setX(2);
+        scaleCircle.setY(2);
+        scaleCircle.setPivotX(theCircle.getRadius());
+        scaleCircle.setPivotY(theCircle.getRadius());
+
+        theCircle.getTransforms().add(scaleCircle);
     }
 }

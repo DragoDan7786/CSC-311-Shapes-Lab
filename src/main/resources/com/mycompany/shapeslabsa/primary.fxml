@@ -18,9 +18,10 @@
             <Button mnemonicParsing="false" onAction="#moveRect" prefHeight="33.0" prefWidth="108.0" text="Rect Right 100" />
             <Button mnemonicParsing="false" onAction="#moveAll" prefHeight="32.0" prefWidth="110.0" text="All Right 200" />
             <Button mnemonicParsing="false" onAction="#rotateRect" prefHeight="33.0" prefWidth="102.0" text="Rect Rotate 60" />
+            <Button mnemonicParsing="false" onAction="#scaleCircle" prefHeight="33.0" prefWidth="104.0" text="Circle Scale 2X" />
          </children>
       </HBox>
-      <Pane prefHeight="400.0" prefWidth="600.0">
+      <Pane fx:id="paneMain" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Circle fx:id="theCircle" fill="DODGERBLUE" layoutX="52.0" layoutY="200.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" />
             <Rectangle fx:id="theRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="104.0" layoutX="130.0" layoutY="148.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
