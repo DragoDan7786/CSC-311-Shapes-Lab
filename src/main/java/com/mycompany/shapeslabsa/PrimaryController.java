@@ -42,6 +42,8 @@ public class PrimaryController {
     private void rotateRect(){
         Rotate rotateRect = new Rotate();
         rotateRect.setAngle(60);
+        rotateRect.setPivotX(theRectangle.getWidth()/2);
+        rotateRect.setPivotY(theRectangle.getHeight()/2);
         theRectangle.getTransforms().add(rotateRect);
         
     }
